@@ -71,3 +71,10 @@ From a Discourse checkout with this plugin installed:
 LOAD_PLUGINS=1 bin/rspec plugins/discourse-creator-channels/spec
 bin/lint --fix plugins/discourse-creator-channels/plugin.rb plugins/discourse-creator-channels/spec
 ```
+
+## Channel directory
+
+`GET /groups.json?is_channel=true` filters the existing directory to marked
+channels before counting and paginating. Core visibility, search and ordering
+remain in effect. The next-page URL preserves the filter. Omitting the parameter
+or passing `false` retains the ordinary group directory.
