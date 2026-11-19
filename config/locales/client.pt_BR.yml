@@ -1,0 +1,6 @@
+pt_BR:
+  js:
+    creator_channels:
+      group:
+        label: "Canal de conteúdo"
+        description: "Este grupo representa um criador de conteúdo ou uma equipe."

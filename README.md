@@ -11,7 +11,11 @@ The group represents the creator's team; its existing group page is the channel 
   group directory. Groups without the marker return `false`.
 - Preloads the field when Discourse preloads group custom fields.
 
-There are no migrations, new routes, settings, or frontend controls. The plugin
+Staff can mark or unmark a non-automatic group as a **Content channel** under
+**Manage → Profile**, then use the existing Save button. The checkbox is hidden
+from non-staff group owners.
+
+There are no migrations, new routes, or settings. The plugin
 uses existing group permissions. On the tested Discourse version, registered
 custom fields can be updated by staff with group-edit permission; a non-staff
 group owner cannot change the marker. The plugin does not override core access
@@ -54,8 +58,8 @@ Send `false` to clear the marker.
 
 ## Scope
 
-This skeleton supplies the marker and API integration only. Channel presentation,
-content attribution, profile links, and a management toggle can build on it later.
+This plugin supplies the marker, API integration, and staff management checkbox.
+Channel presentation, content attribution, and profile links can build on it later.
 Followers, audience membership, payments, and category provisioning are outside
 this plugin's current scope. No Workflows core changes are required.
 
